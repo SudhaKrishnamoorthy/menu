@@ -22,7 +22,7 @@
 class Employee {
     constructor(name, shifts){
         this.name = name;
-        this.shifts = shifts;
+        this.shifts = shifts
     }
     getSchedule(){
         console.log(this.name ,'works on', this.shifts)
@@ -41,7 +41,7 @@ class Employee {
     shifts: weekday mornings, weekday afternoons
 */
 
-let empOne = new Employee('Jess', 'weeknights')
+let empOne = new Employee('Jess', ['weeknights'])
 
 /*
     Call the `getSchedule` method on the
@@ -99,7 +99,7 @@ class Manager extends Employee {
     console.log(this.name , 'manages', this.employees)
     }
     addEmployees(emp){
-        'Sudha'
+        this.employees.push(emp)
 
     }
 }
@@ -117,7 +117,7 @@ class Manager extends Employee {
     employees: Cece and Schmidt
 */
 
-let manager = new Manager('Winston', 'weekday mornings, weekday afternoon', 'Cece and Schmidt')
+let manager = new Manager('Winston', ['weekday mornings', 'weekday afternoon'], ['Cece', 'Schmidt'])
 
 
 /*
@@ -133,7 +133,7 @@ manager.getEmployees()
     'Coach' or whatever name you'd like.
 */
 
-manager.addEmployees()
+manager.addEmployees('Coach')
 
 /*
     Call the `getEmployees` method on the
