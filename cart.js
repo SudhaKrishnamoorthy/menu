@@ -18,7 +18,7 @@
     the food. 
 */
 
-const cart = [
+/*const cart = [
     {
         name: 'pizza', 
         price: 9.99
@@ -34,7 +34,8 @@ const cart = [
 ]
 
 //CODE HERE
-
+const summedPrice = cart.reduce((sum, cart) => sum + cart.price, 0);
+console.log(summedPrice)*/
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
 
@@ -52,10 +53,11 @@ const cart = [
     Note: the numbers passed in for `tax` will be
     decimals, for example: .06 for a 6% tax.
 */
-
+const cart = 
+[{"total": 15, "tax": .06, "coupon": 1}]
 //CODE HERE
-
-
+const calcFinalPrice = cart.map((cart) => (cart.total * (1 + cart.tax)) - cart.coupon)
+console.log(calcFinalPrice)
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -78,7 +80,8 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    Properties that customer object should include : Name: string, id: number, email: string, address: string; phone: number; preferred customer : boolean
+    The customer objects chosen would be useful to identify the customer and provide them the restaurants services based on their identifiers of being a preferred customer or not as well as it would provide a means for the restaurant to contact them with promotions
 
 */
 
@@ -87,4 +90,12 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    'firstName': 'Sudha',
+    'lastName': 'Krishnamoorthy',
+    'email': 'sudha123@this.com',
+    'phone': 123-123-1234,
+    'address': '123, this lane, this city, this state, 11111',
+    'preferred customer': 'yes',
+    'order total': 1000,
+}
