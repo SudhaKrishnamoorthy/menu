@@ -21,9 +21,9 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
+const greetUser = userName => "Welcome back," + " " + userName;
 
-
+console.log(greetUser("Hari"))
 
 
 
@@ -50,6 +50,20 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+function canWeDeliver(zipcode) {
+        let isDeliverable = false
+        for (let i =0; i < deliveryAreaZipCodes.length; i++){
+          if (zipcode === deliveryAreaZipCodes[i]) {
+            isDeliverable = true
+          }
+        }  
+        resultString = "sorry! we can't deliver to that address";
+        if (isDeliverable === true) 
+          resultString = "You're in our delivery zone";
+      return [isDeliverable, resultString]
+    }     
+    console.log(canWeDeliver(85205))
+        
 
 
 
@@ -106,7 +120,9 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
+
+//const newDeals = deals.replace(title[0] => title === 15% Off? 10% Off : title);
+//console.log(newDeals)
 
 
 
@@ -123,4 +139,8 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+deals.forEach(changeDealTerms)
+function changeDealTerms(myDeal) {
+  console.log(myDeal.title.replace('15% Off', '10% Off'))
+  console.log(myDeal.desc.replace('March', 'April'))
+}
