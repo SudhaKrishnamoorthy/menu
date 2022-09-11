@@ -18,7 +18,7 @@
     the food. 
 */
 
-/*const cart = [
+const cart1 = [
     {
         name: 'pizza', 
         price: 9.99
@@ -33,10 +33,10 @@
     }
 ]
 
-//CODE HERE
-const summedPrice = cart.reduce((sum, cart) => sum + cart.price, 0);
-console.log(summedPrice)*/
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+
+const summedPrice = cart1.reduce((sum, cart1) => sum + cart1.price, 0);
+console.log(summedPrice)
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -79,7 +79,7 @@ console.log(calcFinalPrice)
     Your object should have at least 4 properties. 
 */
 
-/*
+/*Answer:
     Properties that customer object should include : Name: string, id: number, email: string, address: string; phone: number; preferred customer : boolean
     The customer objects chosen would be useful to identify the customer and provide them the restaurants services based on their identifiers of being a preferred customer or not as well as it would provide a means for the restaurant to contact them with promotions
 
